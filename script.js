@@ -147,31 +147,67 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-// Mobile menu functionality
-document.querySelector('.mobile-menu').addEventListener('click', function() {
+// Mobile menu toggle (modern)
+(function() {
+    const toggleBtn = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    
-    if (navLinks.style.display === 'flex') {
-        navLinks.style.cssText = `
-            position: fixed;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 26, 0.98);
-            flex-direction: column;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            z-index: 999;
-        `;
-    }
-});
+    if (!toggleBtn || !navLinks) return;
 
-// Close mobile menu when clicking on a link
+    toggleBtn.addEventListener('click', () => {
+        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('show');
+    });
+
+    // Close on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+            navLinks.classList.remove('show');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+
+// Mobile menu functionality (legacy, guarded to avoid errors)
+(function() {
+    const legacyBtn = document.querySelector('.mobile-menu');
+    if (!legacyBtn) return; // if old button doesn’t exist, skip
+
+    legacyBtn.addEventListener('click', function() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.cssText = `
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(26, 26, 26, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                backdrop-filter: blur(10px);
+                z-index: 999;
+            `;
+        }
+    });
+})();
+
+// Close mobile menu when clicking on a link (works for both new and legacy)
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-            document.querySelector('.nav-links').style.display = 'none';
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('show');
+            navLinks.style.display = 'none';
+            const toggleBtn = document.querySelector('.menu-toggle');
+            if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
         }
     });
 });
