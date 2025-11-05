@@ -5,29 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dumith Lusena - Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer specializing in Java, Spring Boot, React, Angular, and modern web technologies.">
+    <meta name="theme-color" content="#00ff88">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Particles Background -->
     <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Dumith Lusena</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
@@ -35,13 +42,23 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="assets/New Profile.jpeg" alt="Dumith Lusena" id="profileImage">
+                <img src="assets/CV Image.jpeg" alt="Dumith Lusena" id="profileImage">
             </div>
-            <h1>Hi , I'm Dumith Lusena</h1>
-            <p class="subtitle">Full Stack Developer</p>
+            <h1>Hi , I'm <span class="typing-text">Dumith Lusena</span></h1>
+            <p class="subtitle">Full Stack Developer <span class="wave">👋</span></p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="assets/CV/Dumith Lusena CV.pdf" download class="btn btn-outline">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <a href="https://github.com/DumithLusena" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
             </div>
         </div>
     </section>
@@ -59,13 +76,54 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="section animate-on-scroll">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2025 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <div class="experience-card">
+                            <div class="experience-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="experience-details">
+                                <h3>Intern Software Engineer</h3>
+                                <h4>DaleCodeLabs</h4>
+                                <p class="experience-description">
+                                    Working as an intern software engineer, gaining hands-on experience in full-stack development with modern technologies and cloud deployment.
+                                </p>
+                                <ul class="experience-highlights">
+                                    <li><i class="fas fa-check-circle"></i> Integrated REST APIs with a React Frontend</li>
+                                    <li><i class="fas fa-check-circle"></i> Created robust backend REST APIs with Spring Boot</li>
+                                    <li><i class="fas fa-check-circle"></i> Implemented multiple mobile application screens with React Native</li>
+                                    <li><i class="fas fa-check-circle"></i> Implemented CI/CD pipelines to deploy backend to AWS with Docker</li>
+                                </ul>
+                                <div class="experience-skills">
+                                    <span class="skill-tag">Spring Boot</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">React Native</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="section animate-on-scroll">
         <h2>Education</h2>
         <div class="education-container">
             <div class="education-timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-date">2025 - Present</div>
                     <div class="timeline-content">
                         <div class="timeline-marker"></div>
                         <div class="education-card">
@@ -73,7 +131,33 @@
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <div class="education-details">
-                                <h3>Full Stack Development</h3>
+                                <h3>Higher National Diploma (HND) in Software Engineering</h3>
+                                <h4>Saegis Campus, Sri Lanka</h4>
+                                <p class="education-description">
+                                    Enrolled in a comprehensive Higher National Diploma program focusing on Software
+                                    Engineering principles,
+                                    software development methodologies, and practical application of programming skills.
+                                    Gaining knowledge in both
+                                    theoretical and practical aspects of software engineering.
+                                </p>
+                                <div class="education-status">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Ongoing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="education-details">
+                                <h3>Diploma in Software Engineering</h3>
                                 <h4>ICET (Institute of Computer Engineering Technology)</h4>
                                 <p class="education-description">
                                     Currently pursuing comprehensive Full Stack Development training, focusing on modern
@@ -86,13 +170,15 @@
                                     <span class="skill-tag">Java</span>
                                     <span class="skill-tag">Spring Boot</span>
                                     <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">HTML/CSS</span>
                                     <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Angular</span>
                                     <span class="skill-tag">Database</span>
+                                    <span class="skill-tag">AWS</span>
                                 </div>
                                 <div class="education-status">
-                                    <i class="fas fa-clock"></i>
-                                    <span>Currently Enrolled</span>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Completed</span>
                                 </div>
                             </div>
                         </div>
@@ -148,8 +234,24 @@
                 <h3>JavaScript</h3>
             </div>
             <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <h3>MySQL</h3>
+                <i class="fas fa-code"></i>
+                <h3>TypeScript</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <h3>Express.js</h3>
+            </div>
+                <div class="skill-item">
+                <i class="fab fa-angular"></i>
+                <h3>Angular</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
             </div>
             <div class="skill-item">
                 <i class="fab fa-html5"></i>
@@ -160,8 +262,36 @@
                 <h3>CSS</h3>
             </div>
             <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <h3>MySQL</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <h3>PostgreSQL</h3>
+            </div>
+              <div class="skill-item">
+                <i class="fas fa-leaf"></i>
+                <h3>MongoDB</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <h3>React Native</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Flutter</h3>
+            </div>
+            <div class="skill-item">
                 <i class="fas fa-code"></i>
-                <h3>TypeScript</h3>
+                <h3>Dart</h3>
+            </div>
+                <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
             </div>
             <div class="skill-item">
                 <i class="fab fa-figma"></i>
@@ -175,10 +305,7 @@
                 <i class="fab fa-chart-line"></i>
                 <h3>Chart.js</h3>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -186,6 +313,119 @@
     <section id="projects" class="section animate-on-scroll">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Income & Expense Tracker App</h3>
+                    <p class="project-description">
+                        Developed a full-stack web application to manage personal finances by tracking income and
+                        expenses in real-time. Integrated JWT-based authentication and authorization for secure,
+                        user-specific access. Integrated Chart.js to visualize monthly and category-wise spending
+                        trends. Used Spring Boot REST APIs for backend logic and data management. Implemented CRUD
+                        operations for transactions with validation and a user-friendly UI using Angular. Connected to
+                        a MySQL database for persistent storage and transaction history.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DumithLusena/Income-and-Expense-Tracker-App-Frontend.git"
+                            target="_blank"><i class="fab fa-github"></i> GitHub (Frontend)</a>
+                        <a href="https://github.com/DumithLusena/Income-Expense-Tracker-App-Backend.git"
+                            target="_blank"><i class="fab fa-github"></i> GitHub (Backend)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-hamburger"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">MOS Burgers - POS System for Burger Shops</h3>
+                    <p class="project-description">
+                        Built a full-stack Point of Sale system for MOS Burgers to manage foods, customers and orders.
+                        Developed robust Spring Boot REST APIs for handling cart, menu items and customers. Utilized
+                        Hibernate (JPA) for efficient ORM and database interaction with MySQL.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">SweetAlert2</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Hibernate</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DumithLusena/MOS_Burgers_Fullstack.git" target="_blank"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Student Internship Portal – Backend</h3>
+                    <p class="project-description">
+                        Developed a RESTful backend for a Student Internship Portal handling student registration,
+                        internship postings, applications, and evaluations using Spring Boot. Designed a layered
+                        architecture (Controller–Service–Repository) with Bean Validation. Integrated MySQL using
+                        JPA/Hibernate with optimized queries and indexing. Secured endpoints with JWT-based auth and
+                        role-based access control (Student/Company/Admin) via Spring Security. Tested and documented
+                        APIs using Postman and Swagger.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Hibernate</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Swagger</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DumithLusena/Student_Internship_Portal_Project_Backend.git" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Library Management System</h3>
+                    <p class="project-description">
+                        Developed a desktop-based Library Management System to manage books, members, borrow/return
+                        transactions, and reporting. Used singleton pattern for database connectivity to ensure
+                        efficient and reusable connection management.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Maven</span>
+                        <span class="tech-tag">Lombok</span>
+                        <span class="tech-tag">JFoenix</span>
+                        <span class="tech-tag">ModelMapper</span>
+                        <span class="tech-tag">JasperReports</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DumithLusena/Library_Management_System.git" target="_blank"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card">
                 <div class="project-image">
                     <i class="fas fa-cloud-sun"></i>
@@ -208,76 +448,26 @@
                 </div>
             </div>
 
-            <div class="project-card">
+                        <div class="project-card">
                 <div class="project-image">
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-robot"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Library Management System</h3>
+                    <h3 class="project-title">Ai Chat Application</h3>
                     <p class="project-description">
-                        A comprehensive library management system built with Java for efficient book and member
-                        management.
+                        Real-time AI responses using the Gemini AI API with a modern UI and smooth animations for an
+                        engaging experience.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Database</span>
-                        <span class="tech-tag">GUI</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DumithLusena/Library_Management_System.git" target="_blank"><i
-                                class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-hamburger"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">MOS Burgers</h3>
-                    <p class="project-description">
-                        Built a full-stack Point of Sale system for MOS Burgers to manage foods, customers and orders.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">Hibernate</span>
-                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Gemini AI API</span>
                         <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">SweetAlert</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Markdown-it</span>
+                        <span class="tech-tag">Font Awesome</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/DumithLusena/MOS_Burgers_Fullstack.git" target="_blank"><i
-                                class="fab fa-github"></i>GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Income & Expense Tracker</h3>
-                    <p class="project-description">
-                        Developed a full-stack web application to manage personal finances by tracking income and
-                        expenses in real-time.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Angular Material</span>
-                        <span class="tech-tag">Chart.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DumithLusena/Income-and-Expense-Tracker-App-Frontend.git"
-                            target="_blank"><i class="fab fa-github"></i>GitHub(Frontend)</a>
-                        <a href="https://github.com/DumithLusena/Income-Expense-Tracker-App-Backend.git"
-                            target="_blank"><i class="fab fa-github"></i>GitHub(Backend)</a>
+                        <a href="https://github.com/DumithLusena/Ai_Chat_Application.git" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -308,28 +498,25 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fas fa-robot"></i>
+                    <i class="fas fa-cart-shopping"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Ai Chat Application</h3>
+                    <h3 class="project-title">E-commerce Website (MERN)</h3>
                     <p class="project-description">
-                        This tool provides real-time AI responses using the Gemini AI API, enhanced with a modern user
-                        interface and smooth animations for an engaging and seamless user experience.
+                        Self-learning, ongoing MERN stack project.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Gemini AI API</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">MarkDown-it</span>
-                        <span class="tech-tag">Font Awesome</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/DumithLusena/Ai_Chat_Application.git" target="_blank"><i
-                                class="fab fa-github"></i>GitHub</a>
+                        <a href="https://github.com/DumithLusena/E-commerce_Website.git" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -357,21 +544,16 @@
                     <i class="fab fa-github"></i>
                     <div>
                         <h4>GitHub</h4>
-                        <p><a href="https://github.com/DumithLusena" target="_blank">github.com/dumith-lusena</a></p>
+                        <p><a href="https://github.com/DumithLusena" target="_blank">github.com/dumith-lusena</a>
+                        </p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <h4>LinkedIn</h4>
-                        <p><a href="https://www.linkedin.com/in/dumith-lusena-866802350/" target="_blank">linkedin.com/in/dumith-lusena</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <div>
-                        <h4>Currently Studying</h4>
-                        <p>Full Stack Development at ICET</p>
+                        <p><a href="https://www.linkedin.com/in/dumith-lusena-866802350/" target="_blank">linkedin.com/in/dumith-lusena</a>
+                        </p>
                     </div>
                 </div>
             </div>
